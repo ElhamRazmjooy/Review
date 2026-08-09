@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<button id="btnGet" class="btn btn-success">دريافت داده‌ها از سايت Api</button>
+
+<script>
+    $("#btnGet").click(function (){
+        $.ajax({
+            type: "Get",
+            url: "https://localhost:44342/home/getdata",
+            success: function (result) {
+                alert(result)
+            }
+        })
+    })
+</script>

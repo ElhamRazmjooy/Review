@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CorsSample/CorsSample.csproj" />
+  <Project Path="FrontCors/FrontCors.csproj" />
+</Solution>

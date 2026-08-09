@@ -1,0 +1,42 @@
+﻿@using XssSample.Models.Entities
+@model IEnumerable<Comment>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<div style="direction:rtl; text-align:right">
+   <h1>نظردهی</h1>
+    <div class="container">
+        <form method="post" asp-action="SendComment">
+            <div class="form-group">
+                <label>نام</label>
+                <br />
+                <input class="form-control" required type="text" name="Name" placeholder="نام را وارد کنید"/>
+            </div>
+            <div class="form-group">
+                <label>نظر</label>
+                <br />
+                <textarea required cols="5" type="text" class="col-md-12" name="Body" placeholder="نظر خود را وارد کنید"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">ارسال نظر</button>
+            </form>
+    </div>
+        <hr />
+        <div class="container">
+            <h2>نظر كاربران</h2>
+            @foreach (var item in Model)
+            {
+                <div class="card">
+                    <label class="card-header">@item.Name</label>
+                    <br />
+                    <label class="card-body">@Html.Raw(item.Body)</label>
+                </div>
+            }
+            <hr />
+        </div>
+</div>  
+<script>
+    alert("سلام اين كد درون صفحه نوشته شده است")
+</script>
+<script>$(document).ready(function () { var cookies = document.cookie; alert(cookies)</script>
+
