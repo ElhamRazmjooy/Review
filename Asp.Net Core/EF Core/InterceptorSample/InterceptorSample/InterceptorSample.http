@@ -1,0 +1,6 @@
+@InterceptorSample_HostAddress = http://localhost:5155
+
+GET {{InterceptorSample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
