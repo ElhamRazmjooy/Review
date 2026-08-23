@@ -1,0 +1,6 @@
+@DistributedCacheSample_HostAddress = http://localhost:5204
+
+GET {{DistributedCacheSample_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
